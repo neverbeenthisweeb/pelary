@@ -1,4 +1,4 @@
-# predictsalary
+# pelary
 
 Predict your salary and then win the negotiation!
 
@@ -11,4 +11,4 @@ Predict your salary and then win the negotiation!
 5. Reach out for contributors
 6.
 
-> predictsalary is for **learning** purpose. (actually, we don't know what we are doing here)
+> pelary is for **learning** purpose. (actually, we don't know what we are doing here)
