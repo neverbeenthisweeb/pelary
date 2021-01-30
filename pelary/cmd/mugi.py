@@ -1,5 +1,6 @@
 import click
-from pelary.service.predictor.mugi import Mugi
+from pelary.service.mugi.mugi import Mugi
+from pelary.usecase.predictor import Predictor
 
 
 @click.command()
@@ -7,8 +8,12 @@ from pelary.service.predictor.mugi import Mugi
 @click.option('--industry', required=True)
 def predict(job_title, industry):
     mugi = Mugi(job_title, industry)
-    predicted_salary = mugi.predict()
-    print(predicted_salary)
+
+    predictor_use_case = Predictor(mugi)
+
+    predicted_salary = predictor_use_case.predict()
+
+    print(f"Predicted salary: $ {predicted_salary}")
 
 
 @click.group("mugi")

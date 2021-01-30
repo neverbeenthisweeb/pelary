@@ -1,4 +1,4 @@
-from pelary.service.predictor.predictor import PredictorInterface
+from pelary.service.predictor import PredictorInterface
 
 
 class Mugi(PredictorInterface):
