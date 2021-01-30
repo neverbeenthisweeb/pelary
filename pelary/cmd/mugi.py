@@ -4,10 +4,9 @@ from pelary.usecase.predictor import Predictor
 
 
 @click.command()
-@click.option('--job-title', required=True)
-@click.option('--industry', required=True)
-def predict(job_title, industry):
-    mugi = Mugi(job_title, industry)
+@click.option('--yoe', required=True)
+def predict(yoe):
+    mugi = Mugi(yoe)
 
     predictor_use_case = Predictor(mugi)
 

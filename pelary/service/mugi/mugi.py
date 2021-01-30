@@ -3,16 +3,14 @@ from pelary.service.predictor import PredictorInterface
 
 class Mugi(PredictorInterface):
     """
-    A predictor that relies on job's title and industry.
+    A predictor that relies on years of experience.
 
     Attributes:
-        job_title (str)
-        industry (str)
+        yoe (float)
     """
 
-    def __init__(self, job_title: str, industry: str) -> None:
-        self.job_title = job_title
-        self.industry = industry
+    def __init__(self, yoe: float) -> None:
+        self.yoe = yoe
 
     def predict(self) -> float:
         # TODO: Improve Mugi implementation.
