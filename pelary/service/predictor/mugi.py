@@ -15,6 +15,6 @@ class Mugi(PredictorInterface):
         self.industry = industry
 
     def predict(self) -> float:
-        # TODO: Implement Mugi.
+        # TODO: Improve Mugi implementation.
         predicted_salary = float(0)
         return predicted_salary
