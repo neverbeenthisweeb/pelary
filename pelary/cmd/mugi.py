@@ -1,12 +1,16 @@
 import click
+from pelary.config import Config
 from pelary.service.mugi.mugi import Mugi
 from pelary.usecase.predictor import Predictor
 
 
 @click.command()
-@click.option('--yoe', required=True)
+@click.option('--yoe', required=True, type=float)
 def predict(yoe):
-    mugi = Mugi(yoe)
+    config = Config.instance()
+
+    mugi = Mugi(config)
+    mugi.set_features(yoe)
 
     predictor_use_case = Predictor(mugi)
 

@@ -1,3 +1,5 @@
+import joblib
+from pelary.config import Config
 from pelary.service.predictor import PredictorInterface
 
 
@@ -9,10 +11,12 @@ class Mugi(PredictorInterface):
         yoe (float)
     """
 
-    def __init__(self, yoe: float) -> None:
+    def __init__(self, config: Config):
+        self.ml_model = joblib.load(filename=config.mugi_ml_model_path)
+
+    def set_features(self, yoe: float):
         self.yoe = yoe
 
     def predict(self) -> float:
-        # TODO: Improve Mugi implementation.
-        predicted_salary = float(0)
-        return predicted_salary
+        predicted_salary = self.ml_model.predict([[self.yoe]])
+        return predicted_salary[0]
