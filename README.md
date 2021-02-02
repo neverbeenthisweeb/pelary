@@ -20,7 +20,8 @@ Predict your salary and then win the negotiation!
 2. (:heavy_check_mark:) Define predictor interface
 3. (:heavy_check_mark:) Add initial predictor implementation (no need to be a [rocket science](https://idioms.thefreedictionary.com/rocket+science#:~:text=A%20pursuit%2C%20activity%2C%20or%20endeavor,negative%20to%20imply%20the%20opposite.))
 4. (:heavy_check_mark:) Implement ML model of [Mugi](docs/predictors/mugi.md)
-5. Develop a new predictor (should be verbose and focused to a specific industry)
-6.
+5. Develop a new predictor (should be verbose and focused to a specific industry) 
+
+Data? Scraping? EDA? ML model? Yes, contributors are very welcome for that stuff (and any other stuff that you might think of). :sweat_smile:
 
 > pelary is for **learning** purpose. (actually, we don't know what we are doing here)
